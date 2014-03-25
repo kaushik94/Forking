@@ -21,7 +21,7 @@ the program produces the following tree:
 			|  |__I
 
 using
-*6 calls to fork
-*3 calls to fork(recurssion)
+* 6 calls to fork
+* 3 calls to fork(recurssion)
 
 
