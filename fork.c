@@ -45,21 +45,20 @@ int build_tree_six(int processes){
 }
 
 
-void build_tree_three(int processes,int generation){
-
-	int i;
-	for(i=0;i<processes;i++)
+void build_tree_three(int processes,int generation){							// program creates "processes" number of children for a 				     								        // generation
+	int i;												
+	for(i=0;i<processes;i++) 
 		{
 			int status;
 			pid_t _pid;
-			_pid = fork();
-			if(_pid == 0){
-				
-				printf("child %d @ parent %d\n",getpid(),getppid());
+			_pid = fork();									// technically we call the fork() only thrice in the for loop
+			if(_pid == 0){									// but  we make the children follow their parent process by
+													// recurssing, hence the get forked again.
+				printf("child %d @ parent %d\n",getpid(),getppid());			
 				if((i==2)&&(generation == 1)){
-					build_tree_three(2,2);}
+					build_tree_three(2,2);}						// recurssion for the 2nd gen, 2nd child.
 				if((i==1)&&(generation == 1)){
-					build_tree_three(1,2);}
+					build_tree_three(1,2);}						// recurssion for the 2nd gen, 3rd child.
 				exit(0);
 			}
 			else{
@@ -71,6 +70,7 @@ void build_tree_three(int processes,int generation){
 build_tree(){
 
 	build_tree_three(3,1);
+	//build_tree_six(3);
 }	
 
 int main(){
