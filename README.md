@@ -1,8 +1,12 @@
 
 Forking:
+--------
+--------
 
-	1) fork.c
-		the program produces the following tree:
+1) fork.c
+--------	
+
+the program produces the following tree:
 
 			A
 			|__B
@@ -16,9 +20,8 @@ Forking:
 			|  |__H
 			|  |__I
 
-		using
-		1) 6 calls to fork
-
-		2) 3 calls to fork(recurssion)
+using
+*6 calls to fork
+*3 calls to fork(recurssion)
 
 
