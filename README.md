@@ -1,5 +1,4 @@
 
-
 Forking
 
 the program forks the following tree using
@@ -20,5 +19,11 @@ to build the following tree:
 			|  |__G
 			|  |__H
 			|  |__I
+
+How do we go about it ?
+
+1) Using 6 fork calls- This is pretty straight forward assuming you know how fork() and exit() works.
+   
+
 
 
