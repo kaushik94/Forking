@@ -1,13 +1,8 @@
 
-Forking
+Forking:
 
-the program forks the following tree using
-
-1) 6 calls to fork
-
-2) 3 calls to fork(recurssion)
-
-to build the following tree:
+	1) fork.c
+		the program produces the following tree:
 
 			A
 			|__B
@@ -21,10 +16,9 @@ to build the following tree:
 			|  |__H
 			|  |__I
 
-How do we go about it ?
+		using
+		1) 6 calls to fork
 
-1) Using 6 fork calls - This is pretty straight forward assuming you know how fork() and exit() works.
-   
-
+		2) 3 calls to fork(recurssion)
 
 
